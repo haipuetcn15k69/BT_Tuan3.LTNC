@@ -1,0 +1,4 @@
+Error.
+Vì char c thì c coi là con trỏ dạng mảng kí tự được khởi tạo sẵn.
+   *p là con trỏ dạng số hữu tí
+=> Lỗi không hợp lệ kiểu biến con trỏ

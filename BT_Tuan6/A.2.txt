@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+void f(int a[])
+{
+    cout<<sizeof(a)<<endl;
+}
+void g(int a[10])
+{
+      cout<<sizeof(a)<<endl;
+}
+int main()
+{  int a[]={1,2,3};
+  //SizeArray(a);
+ cout<<sizeof(a);
+ cout<<endl;
+ f(a);
+    g(a);
+
+    return 0;
+}
+// Output:12
+          8
+          8
+/*Syntax:sizeof(?)
+  ?:kiểu nguyên thủy(int,float,..);biến;mảng.
+  return(giá trị trả về):số byte để lưu trữ ?
+  VD:sifeof(int)=4;VD như trên.
+ Question:tại sao sizeof(a) khác f(a).
+  Vì (int a[]) trong f được compiler hiểu là *a
+  *Notice:thường biên con trỏ có 8 byte(64bit).
+*/
+  

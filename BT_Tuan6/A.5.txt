@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+char* weird_string()
+{
+    char c[]="123345";
+    return c;
+}
+int main()
+{
+    cout<<weird_string();
+
+  return 0;
+}
+//Output:Rỗng.
+/*Reason: c inside ... funtion is a local variable.
+           Therefore, the memory for c was deleted.
+           Final, c point to the invalid area.
+           This is undefined behavior(Hành vi không xác định)
+*/
