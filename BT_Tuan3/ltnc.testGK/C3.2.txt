@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+void swap(int &x,int &y)
+{
+    int tmp=x;
+    x=y;
+    y=tmp;
+}
+int main()
+{   int a[5]={1,5,7,8,2};
+    const int n=5;
+    int i=n;
+    while(i>0)
+    {   bool isSwapped=false;
+        for(int j=1;j<n;j++) if(a[j]<a[j-1]) 
+        {swap(a[j],a[j-1]); 
+         isSwapped=true;        
+        }
+        if(!isSwapped) break;
+        i--;
+    }
+    for(int i=0;i<n;i++) cout<<a[i]<<" ";
+
+    return 0;
+}

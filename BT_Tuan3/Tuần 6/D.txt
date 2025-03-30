@@ -1,0 +1,13 @@
+1.Answer:iii,*p=n=5;
+2.       iii.p1=&(*p2)=p2
+3.       iv.All Correct.
+4.       iii.
+5.       iv.All correct.
+6.       ?
+7.       iii.2 2 3
+Reason Q7:
+*(b+i)=a[0]=1;
+*(b++)=*b => a[0]=2(a[1])
+*(++b)=a[2]=a[i](3).
+And, a[2] not modified ,value is 2.
+Summarize: 2 2 3 0 0 ..

@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+int m,n,k,q;
+
+bool Invalid(int x,int y,int m,int n)
+{
+    if(x<=n-1&&y<=m-1&&x>-1&&y>-1) return true;
+    else return false;
+}
+int main()
+{    
+cin>>m>>n>>k>>q;
+int arr[m][n]={0};
+ arr[0][n-1]=0;
+   int a[k][3];
+   for(int i=0;i<k;i++) 
+   {   cin>>a[i][0]>>a[i][1]>>a[i][2];
+   }
+   int b[q][2];
+   for(int i=0;i<q;i++) {
+       
+       cin>>b[i][0]>>b[i][1];
+   }
+   for(int i=0;i<k;i++)
+   {  int  x=a[i][0]-1,y=a[i][1]-1;
+   int v=a[i][2];
+      if(Invalid(x,y,m,n))  arr[x][y]=v;
+   }
+   for(int i=0;i<q;i++)
+   {
+       int sum=0;
+       int  x=b[i][0]-1,y=b[i][1]-1;
+       int up_x=x,up_y=y-1;
+        int down_x=x,down_y=y+1;
+        int left_x=x+1,left_y=y;
+        int right_x=x-1,right_y=y;
+        int upleft_x=x+1,upleft_y=y-1;
+        int downleft_x=x+1,downleft_y=y+1;
+        int upright_x=x-1,upright_y=y-1;
+        int downright_x=x-1,downright_y=y+1;
+        if(Invalid(up_x,up_y,m,n)) sum+=arr[up_x][up_y];
+        if(Invalid(down_x,down_y,m,n)) sum+=arr[down_x][down_y];
+        if(Invalid(left_x,left_y,m,n)) sum+=arr[left_x][left_y];
+        if(Invalid(right_x,right_y,m,n)) sum+=arr[right_x][right_y];
+        if(Invalid(upleft_x,upleft_y,m,n)) sum+=arr[upleft_x][upleft_y];
+        if(Invalid(upright_x,upright_y,m,n)) sum+=arr[upright_x][upright_y];
+        if(Invalid(downright_x,downright_y,m,n)) sum+=arr[downright_x][downright_y];
+        if(Invalid(downleft_x,downleft_y,m,n)) sum+=arr[downleft_x][downleft_y];
+         cout<<sum<<endl;
+   }
+   return 0;
+}

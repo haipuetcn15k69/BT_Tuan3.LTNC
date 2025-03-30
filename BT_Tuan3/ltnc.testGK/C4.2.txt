@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int binarySearch(int a[],int size,int left,int right,int key)
+{ if(left>right) return -1;
+   int mid=(left+right)/2;
+   if(a[mid]>key) return binarySearch(a,size,left,mid-1,key);
+    else if(a[mid]<key) return binarySearch(a,size,mid+1,right,key);
+    else return mid+1;
+}
+int main()
+{   int a[5]={1,2,3,4,8};
+    const int n=5;
+     int key;
+     cin>>key;
+     cout<<binarySearch(a,n,0,n-1,key);
+    return 0;
+}

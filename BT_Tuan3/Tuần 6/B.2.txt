@@ -1,0 +1,4 @@
+Answer:*p=5;
+k=5 // Output:4
+*k=5//Error :invalid tye argument
+p=5 //Error...
